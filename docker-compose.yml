@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  debuild:
+    image: digitalsleuth/debuilder:latest
+    container_name: debuilder
+    hostname: debuilder
+    cap_add:
+      - SYS_ADMIN
+    privileged: True
+    security_opt:
+      - label:disable
+    
