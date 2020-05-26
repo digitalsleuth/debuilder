@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  debuild:
+    build:
+      context: .
+    container_name: debuild_test
+    hostname: debuilder
+    cap_add:
+      - SYS_ADMIN
+    privileged: True
+    security_opt:
+      - label:disable
